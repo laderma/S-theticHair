@@ -1,0 +1,32 @@
+{# ------------------------------------------------------- #}
+{# INDIVIDUAL VIEW FOR EACH standorte #}
+{# This page can use any data from http:localhost:2000/cms/#/form/standorte/ #}
+{# Webhook uses the SWIG.js (like Djagno/Twig) templating system. Their documentation is here: #}
+{# http://paularmstrong.github.io/swig/docs/tags/ #}
+{# Learn about calling data into Webhook pages here: #}
+{# http://www.webhook.com/docs/template-rules-and-filters/ #}
+{# ------------------------------------------------------- #}
+{# Confused what extends and blocks do? Watch a primer: #}
+{# http://www.webhook.com/docs/template-inheritance-blocks/ #}
+{% extends "templates/partials/page.html" %}
+{% block content %}
+	{% if item.jameda_anaus %}
+		{{item.jamedacode|safe}}
+	{% endif %}
+        {{ item.wysiwyg_text|safe }}
+{% endblock %}
+{% block more-links-header %}
+Weitere Standorte
+{% endblock %}
+{% block more-links %}
+                    {% set standorte = cms.standorte %} {% for object in standorte %}
+                    <li><img class="more-links-arrow-icon" src="/static/img/icons/arrow.png" /><a href="{{ url(object) }}">{{ object.name }}</a>
+                    </li>
+                    {% endfor %}
+{% endblock %}
+{% block article-image %}
+    <img src="{{ item.artikelbild|imageCrop(700,400) }}" class="article-image" />
+{% endblock %}
+{% block article-caption %}
+    {{ item.artikelbild_beschreibung }}
+{% endblock %}

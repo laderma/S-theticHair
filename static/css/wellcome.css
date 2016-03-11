@@ -1,0 +1,197 @@
+.wellcome > p {
+    font-size: 25px;
+}
+
+.wellcome-sign {
+    position: absolute;
+    width: 240px;
+    left: 390px;
+    top: 5px;
+}
+
+.wellcome.woman {
+    width: 425px;
+    height: 325px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.7) none repeat scroll 0% 0%;
+    opacity: 0.7;
+    transition: all 0.3s linear 0s;
+    position: absolute;
+    bottom: 0px;
+    left: 50px;
+    border-radius: 3px 3px 0px 0px;
+    -moz-border-radius: 3px 3px 0px 0px;
+    -webkit-border-radius: 3px 3px 0px 0px;
+}
+
+.wellcome.man {
+    width: 425px;
+    height: 325px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.7) none repeat scroll 0% 0%;
+    opacity: 0.7;
+    transition: all 0.3s linear 0s;
+    position: absolute;
+    bottom: 0px;
+    right: 50px;
+    border-radius: 3px 3px 0px 0px;
+    -moz-border-radius: 3px 3px 0px 0px;
+    -webkit-border-radius: 3px 3px 0px 0px;
+}
+
+.wellcome.woman:hover {
+    transition: all linear 0.3s;
+    opacity: 1.0;
+    cursor: pointer;
+}
+
+.wellcome.man:hover {
+    transition: all linear 0.3s;
+    opacity: 1.0;
+    cursor: pointer;
+}
+
+.wellcome-image {
+    position: absolute;
+    bottom: 0;
+    pointer-events: none;
+}
+
+.wellcome-image.woman {
+    left: -30px;
+}
+
+.wellcome-image.man {
+    right: -105px;
+}
+
+.wellcome-content {
+    color: #fff;
+}
+
+.wellcome-content a,
+a:visited {
+    color: #FFF;
+    text-decoration: none;
+    border-bottom: 1px dotted rgba(255, 255, 255, 0.5);
+    display: block;
+    margin-top: -15px;
+    width: 90%;
+}
+
+.wellcome-content.woman >p {
+    width: 255px;
+    float: right;
+    height: 310px;
+}
+
+.wellcome-content.man > p {
+    width: 255px;
+    float: left;
+    height: 310px;
+}
+
+.wellcome-content > h2 {
+    font-size: 20px;
+    display: inline;
+    margin: 0;
+}
+
+.wellcome-content.woman > h2 {
+    float: right;
+}
+
+.wellcome-content.man > h2 {
+    float: left;
+}
+
+
+/*Chrome Fix*/
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    .wellcome > p {
+        font-size: 25px;
+    }
+    .wellcome-sign {
+        position: absolute;
+        width: 215px;
+        left: 390px;
+        top: -3px;
+    }
+    .wellcome.woman {
+        width: 425px;
+        height: 325px;
+        padding: 10px;
+        background: rgba(0, 0, 0, 0.7) none repeat scroll 0% 0%;
+        opacity: 0.7;
+        transition: all 0.3s linear 0s;
+        position: absolute;
+        bottom: 0px;
+        left: 25px;
+    }
+    .wellcome.man {
+        width: 425px;
+        height: 325px;
+        padding: 10px;
+        background: rgba(0, 0, 0, 0.7) none repeat scroll 0% 0%;
+        opacity: 0.7;
+        transition: all 0.3s linear 0s;
+        position: absolute;
+        bottom: 0px;
+        right: 25px;
+    }
+    .wellcome.woman:hover {
+        transition: all linear 0.3s;
+        opacity: 1.0;
+        cursor: pointer;
+    }
+    .wellcome.man:hover {
+        transition: all linear 0.3s;
+        opacity: 1.0;
+        cursor: pointer;
+    }
+    .wellcome-image {
+        position: absolute;
+        top: -155px;
+        pointer-events: none;
+    }
+    .wellcome-image.woman {
+        left: -30px;
+    }
+    .wellcome-image.man {
+        right: -105px;
+    }
+    .wellcome-content {
+        color: #fff;
+    }
+    .wellcome-content a,
+    a:visited {
+        color: #FFF;
+        text-decoration: none;
+        border-bottom: 1px dotted rgba(255, 255, 255, 0.5);
+        display: block;
+        margin-top: -15px;
+        width: 90%;
+    }
+    .wellcome-content.woman >p {
+        width: 255px;
+        float: right;
+        height: 310px;
+    }
+    .wellcome-content.man > p {
+        width: 255px;
+        float: left;
+        height: 310px;
+    }
+    .wellcome-content > h2 {
+        font-size: 20px;
+        display: inline;
+        margin: 0;
+    }
+    .wellcome-content.woman > h2 {
+        float: right;
+    }
+    .wellcome-content.man > h2 {
+        float: left;
+    }
+}

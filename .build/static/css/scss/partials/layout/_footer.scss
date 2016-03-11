@@ -1,0 +1,79 @@
+#footer {
+    margin: 0px auto;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.63) none repeat scroll 0% 0%;
+    height: auto;
+    padding: 10px 0px 10px 0px;
+    .footer-grid {
+        @include flex(row);
+        width: 100%;
+        margin: 0 auto;
+        color: #fff;
+        .footer-grid-row {
+            width: 50%;
+            padding: 10px;
+            h2 {
+                @include font(20px);
+                color: #fff;
+                margin: 0;
+            }
+            ul {
+                list-style-type: none;
+                font-size: 14px;
+                margin: 10px 0px 0px -25px;
+                width: 285px;
+            }
+            ul li {
+                margin: 0 auto;
+                padding: 5px;
+                margin-top: 5px;
+                position: relative;
+                right: 20px;
+                color: #fff;
+                cursor: pointer;
+                transition: all linear 0.3s;
+                padding-left: 25px;
+                width: 100%;
+            }
+            ul li:hover {
+                margin: 0 auto;
+                margin-top: 5px;
+                position: relative;
+                right: 20px;
+                color: #fff;
+                cursor: pointer;
+                background-color: rgba(255, 255, 255, 0.1);
+                transition: all linear 0.3s;
+                padding-left: 25px;
+                transition: all linear 0.3s;
+            }
+            ul li a {
+                color: #fff;
+                text-decoration: none;
+            }
+            a,
+            a:visited {
+                text-transform: uppercase;
+                color: #fff;
+            }
+        }
+        .three {
+            width: 33.3%;
+            flex-grow: 1;
+            h2 {
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            }
+        }
+        .left {
+            text-align: left;
+        }
+        .right {
+            text-align: right;
+        }
+    }
+    .footer-dentalplus-icon {
+        padding-right: 5px;
+        position: relative;
+        bottom: -5px;
+    }
+}

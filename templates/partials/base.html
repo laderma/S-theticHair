@@ -1,0 +1,140 @@
+{% include "templates/partials/layout/header.html" %} {% block content %}{% endblock %} {% include "templates/partials/layout/footer.html" %}
+
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+<script src="/static/js/plugin/trmix.min.js"></script>
+<script src="/static/js/plugin/jssor.slider.min.js"></script>
+<script src="/static/js/plugin/jssor.slider.mini.js"></script>
+<script src="/static/js/plugin/vegas.min.js"></script>
+<script src="/static/js/plugin/jquery.slicknav.min.js"></script>
+<script src="/static/js/plugin/jquery.mmenu.min.js"></script>
+
+<!-- build:js /static/javascript/minified.js -->
+<script src="/static/js/plugin/superfish.min.js"></script>
+<script src="/static/js/plugin/jquery.nicescroll.min.js"></script>
+<script src="/static/js/plugin/js.cookie.min.js"></script>
+<script src="/static/js/plugin/center.min.js"></script>
+<script src="/static/js/plugin/visible.min.js"></script>
+<script src="/static/js/plugin/jquery.snow.min.js"></script>
+
+<script src="/static/js/fnc/slider.min.js"></script>
+<script src="/static/js/fnc/mobile-menu.min.js"></script>
+<script src="/static/js/fnc/choose-location.min.js"></script>
+<!-- endbuild -->
+
+<script src="/static/js/fnc/tracking.js"></script>
+
+
+<script>
+    $(document).ready(function () {
+
+        var optionsPromoSlider = {
+            $PauseOnHover: true,
+            $SlideDuration: 1000,
+            $ArrowNavigatorOptions: {
+                $Class: $JssorArrowNavigator$,
+                $ChanceToShow: 2
+            },
+        };
+        var promoSlider = new $JssorSlider$('promo-slider', optionsPromoSlider);
+
+
+        var optionsNewsSlider = {
+            $PauseOnHover: true,
+            $SlideDuration: 1000,
+            $ArrowNavigatorOptions: {
+                $Class: $JssorArrowNavigator$,
+                $ChanceToShow: 2
+            },
+        };
+        var newsSlider = new $JssorSlider$('news-slider', optionsNewsSlider);
+
+        $('ul.sf-menu').superfish({
+            animation: {
+                opacity: 'show',
+                height: 'show'
+            }, // fade-in and slide-down animation
+        });
+
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 1) {
+                $('#header').addClass("sticky");
+            } else {
+                $('#header').removeClass("sticky");
+            }
+        });
+
+    })
+</script>
+
+<script>
+    $(document).ready(function () {
+
+        $('#wellcome').vegas({
+            cover: true,
+            align: 'top',
+            slides: [{
+                src: '/static/img/content/wellcome-bg.jpg'
+                        }],
+        });
+
+    })
+</script>
+
+{% if cms.ad.ad_anaus %}
+<script>
+    $(document).ready(function () {
+        //Just for developing!
+
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            // some code..
+        } else {
+            if (Cookies.get('ad') != 1) {
+                $('.ad-overlay').fadeIn();
+                $('#ad').center();
+                $.fn.snow({
+                    minSize: 15,
+                    maxSize: 50,
+                    newOn: 500,
+                    flakeColor: '#ffffff'
+                });
+                $('#ad').vegas({
+                    cover: true,
+                    slides: [{
+                        src: '{{ cms.ad.ad_hintergrund.url }}'
+                                            }]
+                });
+            }
+        };
+
+
+        $('.ad-close').on('click', function () {
+            Cookies.set('ad', '1', {
+                expires: 7
+            });
+            $('.ad-overlay').fadeOut();
+        })
+    })
+</script>
+{% endif %} {% block scripts_extra %}{% endblock %} {# Google Analytics code. Feel free to remove. #}
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-70141378-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+</body>
+
+</html>

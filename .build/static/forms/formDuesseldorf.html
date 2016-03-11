@@ -1,0 +1,16 @@
+<form action="http://webdev.laderma.net/sthetic/mail.php" method="post">
+    <input type="text" placeholder="Name, Vorname" name="name" required />
+    <input type="text" placeholder="Ihre E-Mail-Adresse" name="email" required />
+    <select name="standort">
+        <option value="Düsseldorf">Düsseldorf</option>
+        <option value="Hamburg">Hamburg</option>
+        <option value="Köln">Köln</option>
+        <option value="München">München</option>
+        <option value="Stuttgart">Stuttgart</option>
+        <option value="Mannheim">Mannheim</option>
+        <option value="Frankfurt">Frankfurt</option>
+    </select>
+    <input type="text" placeholder="Betreff Ihrer Nachricht" name="betreff" required />
+    <textarea name="nachricht" required></textarea>
+    <input type="submit" name="submit_contact" value="Absenden" />
+</form>

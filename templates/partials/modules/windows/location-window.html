@@ -1,0 +1,26 @@
+<div id="" class="window-overlay" style="">
+    <div id="" class="choose-location-grid">
+        <div class="choose-location-grid-row" style="">
+            <img src="/static/img/map/germany.png" alt="Deutschlandkarte" usemap="#map" />
+            <map name="map">
+                <area shape="circle" coords="231, 403, 16" href="#muenchen" class="choose-muenchen" />
+                <area shape="circle" coords="135, 357, 15" href="#stuttgart" class="choose-stuttgart" />
+                <area shape="circle" coords="67, 315, 16" href="#mannheim" class="choose-mannheim" />
+                <area shape="circle" coords="128, 264, 15" href="#frankfurt" class="choose-frankfurt" />
+                <area shape="circle" coords="76, 227, 15" href="#köln" class="choose-koeln" />
+                <area shape="circle" coords="58, 199, 15" href="#duesseldorf" class="choose-duesseldorf" />
+                <area shape="circle" coords="163, 65, 17" href="#hamburg" class="choose-hamburg" />
+                <area shape="circle" coords="205, 303, 19" href="#nuernberg" class="choose-nuernberg" />
+                <area shape="circle" coords="282, 140, 19" href="#berlin" class="choose-berlin" />
+            </map>
+        </div>
+        <div class="choose-location-grid-row" style="width:70%;">
+            <img src="/static/img/icons/x.png" alt="Close Icon" class="close-location-window" />
+            <h1 class="location-name">Bitte wählen Sie einen Standort</h1>
+            <p class="location-data">Die S-thetic Clinic verfügt über Standorte in Düsseldorf, Hamburg und Frankfurt. Ebenfalls in Düsseldorf, sowie in München, in Köln, in Stuttgart und in Bad Dürkheim / Mannheim kommen außerdem die S-thetic Lounges hinzu. Die verschiedenen Zentren decken nahezu das gesamte Behandlungsspektrum der ästhetischen Medizin ab.</p>
+            <div id="" class="location-form" style="">
+                {% include "templates/partials/modules/form.html" %}
+            </div>
+        </div>
+    </div>
+</div>

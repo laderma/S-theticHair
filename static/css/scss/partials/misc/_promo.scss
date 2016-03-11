@@ -1,0 +1,16 @@
+#promo-grid {
+    margin: 0 auto;
+    width: 860px;
+    height: auto;
+    overflow: auto;
+    @include flex(row);
+    .promo-grid-row {
+        width: 50%;
+        flex-grow: 1;
+    }
+    
+    .video{
+        order: 2;
+    }
+    
+}

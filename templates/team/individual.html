@@ -1,0 +1,40 @@
+{# ------------------------------------------------------- #}
+{# INDIVIDUAL VIEW FOR EACH team #}
+{# This page can use any data from http:localhost:2000/cms/#/form/team/ #}
+{# Webhook uses the SWIG.js (like Djagno/Twig) templating system. Their documentation is here: #}
+{# http://paularmstrong.github.io/swig/docs/tags/ #}
+{# Learn about calling data into Webhook pages here: #}
+{# http://www.webhook.com/docs/template-rules-and-filters/ #}
+{# ------------------------------------------------------- #}
+{# Confused what extends and blocks do? Watch a primer: #}
+{# http://www.webhook.com/docs/template-inheritance-blocks/ #}
+{% extends "templates/partials/page.html" %}
+{% block content %}
+	{% if item.jameda_anaus %}
+		{{item.jamedacode|safe}}
+	{% endif %}
+        {{ item.text|safe }}
+        <h2>Lernen Sie unser Team kennen</h2>
+        <div style="width:100%;height:auto;overflow:auto;display:block;clear:both;">
+            {% for row in cms.arztefooter.arzt %}
+                <a href="{{ row.profillink }}">
+                    <img alt="{{row.name}}" src="{{ row.bild|imageSize(100, 100) }}" class="doc-img hover-shadow" style="width:100px !important;margin-left:5%;" />
+                </a>
+            {% endfor %}
+        </div>
+{% endblock %}
+{% block more-links-header %}
+Unsere Fachärzte
+{% endblock %}
+{% block more-links %}
+                    {% set team = cms.team %} {% for object in team %}
+                    <li><img class="more-links-arrow-icon" src="/static/img/icons/arrow.png" /><a href="{{ url(object) }}">{{ object.name }}</a>
+                    </li>
+                    {% endfor %}
+{% endblock %}
+{% block article-image %}
+    <img src="{{ item.artikelbild|imageCrop(700,400) }}" class="article-image" />
+{% endblock %}
+{% block article-caption %}
+    {{ item.artikelbild_beschreibung }}
+{% endblock %}

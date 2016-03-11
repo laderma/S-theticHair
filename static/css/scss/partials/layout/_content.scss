@@ -1,0 +1,140 @@
+#content {
+    margin: 0 auto;
+    width: 1000px;
+    height: auto;
+    padding: 0px 0px 15px 0px;
+    @include flex(row);
+    .sidebar {
+        width: 350px;
+        margin: 10px;
+        background: #eee;
+        #map-header {
+            @include font(17px);
+            display: inline-block;
+            width: 97%;
+            height: 25px;
+            background: #A32742;
+            padding: 5px 0px 0px 5px;
+            margin-top: 0px;
+            color: #fff;
+            border: 1px solid rgba(0, 0, 0, 0.3);
+        }
+        #sidebar-map {
+            display: block;
+            width: 100%;
+            height: auto;
+            margin: -10px auto;
+            background: #fff;
+            padding: 10px 0px 20px 0px;
+            cursor: pointer;
+        }
+        #more-links-header {
+            display: inline-block;
+            @include font(17px);
+            width: 97%;
+            height: 25px;
+            background: #A32742;
+            padding: 5px 0px 0px 5px;
+            margin-top: 10px;
+            color: #fff;
+            border: 1px solid rgba(0, 0, 0, 0.3);
+        }
+        #more-links {
+            width: 100%;
+            display: block;
+            margin-left: -30px;
+            margin-top: -20px;
+        }
+        .more-links-arrow-icon {
+            float: left;
+            opacity: 0.5;
+            margin: 10px 0px 0px 5px;
+            width: 10px;
+        }
+        #more-links li a {
+            position: relative;
+            top: 5px;
+            left: 5px;
+            color: #000;
+            text-decoration: none;
+        }
+        #more-links li {
+            margin: 12px -10px -10px;
+            list-style-type: none;
+            width: 99%;
+            height: 30px;
+            background: #FFF none repeat scroll 0% 0%;
+            color: rgba(0, 0, 0, 0.5);
+            transition: all 0.3s linear 0s;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+        }
+        #more-links li:hover {
+            margin: 12px -10px -10px;
+            list-style-type: none;
+            width: 99%;
+            height: 30px;
+            background: #FFF none repeat scroll 0% 0%;
+            color: rgba(0, 0, 0, 1.0);
+            transition: all 0.3s linear 0s;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+        }
+        #sidebar-standorte {
+            border-left: 2px solid #D7DBE4;
+            border-right: 2px solid #D7DBE4;
+            background: #fff;
+            border-bottom: 2px solid #D7DBE4;
+        }
+        .sidebar-standort-header {
+            display: block;
+            width: 100%;
+            height: 30px;
+            background: rgb(215, 219, 228) none repeat scroll 0% 0%;
+        }
+        .sidebar-standort-header>a {
+            position: relative;
+            top: 5px;
+            left: 10px;
+            color: #000;
+            text-decoration: none;
+        }
+        .sidebar-standort-text {
+            display: block;
+            width: 100%;
+            height: auto;
+            margin: 5px;
+            padding: 10px 0px 10px 0px;
+        }
+        #map img {
+            display: block;
+            margin: 0 auto;
+            margin-top: 2px;
+            width: 98%;
+            height: 170px;
+        }
+    }
+    .article {
+        width: 90%;
+        padding: 10px;
+        h1 {
+            @include font(25px);
+            margin: 10px auto;
+        }
+        h2 {
+            @include font(20px);
+        }
+        h3 {
+            @include font(18px);
+        }
+        p {
+            @include font(15px);
+        }
+        a,
+        a:visited {
+            color: #000;
+            text-decoration: underline;
+        }
+        li {
+            list-style-image: url(/static/img/logo-iconl.gif);
+        }
+    }
+}

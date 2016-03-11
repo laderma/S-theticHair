@@ -1,0 +1,124 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300);
+
+@mixin font($size) {
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 300;
+    font-size: $size;
+}
+
+@mixin flex($direction) {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: $direction;
+}
+
+html,
+body {
+    min-width: 100%;
+    margin: 0;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 300;
+    color: #000;
+    position: relative;
+}
+
+.content-row {
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    background: #FFF none repeat scroll 0% 0%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.content {
+    margin: 0 auto;
+    width: 1000px;
+    height: auto;
+    padding: 10px;
+    position: relative;
+}
+
+.spacer {
+    width: 100%;
+    height: 50px;
+    display: block;
+    clear: both;
+}
+
+h1 {
+    @include font(25px);
+    margin: 10px auto;
+}
+
+h2 {
+    @include font(20px);
+}
+
+h3 {
+    @include font(18px);
+}
+
+h1.center,h2.center,h3.center{
+    text-align: center;
+}
+
+p {
+    @include font(15px);
+}
+
+a,
+a:visited {
+    color: #000;
+    text-decoration: underline;
+}
+
+a.button-link {
+    display: inline-block;
+    padding: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    width: auto;
+    background: #535353 none repeat scroll 0% 0%;
+    color: #fff;
+    opacity: 0.7;
+    transition: all linear 0.3s;
+    text-decoration: none;
+}
+
+a.button-link:hover {
+    display: inline-block;
+    padding: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    width: auto;
+    background: #A32742;
+    color: #fff;
+    opacity: 1.0;
+    transition: all linear 0.3s;
+    cursor: pointer;
+}
+
+.jameda {
+    float: right;
+    margin: -10px -10px 0px 0px;
+}
+
+.mobile{
+    display: none;
+}
+
+@import 'partials/layout/header';
+@import 'partials/layout/content';
+@import 'partials/layout/slider';
+@import 'partials/layout/footer';
+@import 'partials/misc/effect';
+@import 'partials/misc/forms';
+@import 'partials/misc/location-window';
+@import 'partials/misc/preview-box';
+@import 'partials/misc/promo';
+@import 'partials/misc/wellcome-slide';
+@import 'partials/misc/contact-window';
+@import 'partials/misc/siegel';
+@import 'partials/misc/ad';
+@import 'partials/misc/bar';
+@import 'partials/misc/location-grid';
+
+@import 'partials/layout/responsive';

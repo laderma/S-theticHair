@@ -1,0 +1,11 @@
+<div id="" class="content-row not-mobile" style="">
+    <div id="" class="content" style="">
+        <div id="siegel-row" class="" style="">
+            {% for row in cms.siegel.siegel %}
+            <a target="_blank" href="{{ row.siegel_link }}">
+                <img alt="{{row.siegel_name}}" class="siegel smooth-resize" src="{{ row.siegel_bild|imageSize(200, 200) }}" />
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</div>

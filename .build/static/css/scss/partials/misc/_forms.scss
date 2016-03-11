@@ -1,0 +1,50 @@
+input[type=text] {
+    display: block;
+    margin-bottom: 10px;
+    border: 0;
+    padding: 5px;
+    font-weight: lighter;
+    margin-bottom: 5px;
+    width: 90%;
+    color: #000;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+select {
+    display: block;
+    margin-bottom: 10px;
+    border: 0;
+    padding: 5px;
+    font-weight: lighter;
+    margin-bottom: 5px;
+    width: 92%;
+    color: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.1);
+    padding-left: 0;
+}
+
+textarea {
+    border: 0;
+    padding: 5px;
+    background: rgba(0, 0, 0, 0.1);
+    width: 90% !important;
+    height: 100px !important;
+    ;
+}
+
+input[type=submit] {
+    border: 0;
+    padding: 5px;
+    margin-top: 5px;
+    color: #fff;
+    background: #C11C36;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: all linear 0.2s;
+}
+
+input[type=submit]:hover {
+    opacity: 1.0;
+    transition: all linear 0.2s;
+    box-shadow: 0px 0px 7px 0px #000;
+}

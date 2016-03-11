@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+  {% set site_title = getSetting('site_name')%}
+  {% set site_description = getSetting('site_description')%}
+  {% set site_keywords = getSetting('site_keywords')%}
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>{% block title %}{% if item.seo__titel %}{{ item.seo__titel }}{% else %}{{ site_title|default('Webhook site') }}{% endif %}{% endblock %}</title>
+    <meta name="description" content="{% block beschreibung %}{% if item.seo__beschreibung %}{{ item.seo__beschreibung }}{% else %}{{ site_description }}{% endif %}{% endblock %}">
+    <meta name="keywords" content="{% block keywords %}{% if item.seo__keywords %}{{ item.seo__keywords }}{% else %}{{ site_keywords }}{% endif %}{% endblock %}">
+    <meta name="viewport" content="width=device-width">
+    <meta name="google-site-verification" content="WK4ZhgT47hv6UrzZLwed2JoFVtRlG7T-BTKV-a770Cw" />
+
+    <link rel="shortcut icon" href="/static/img/favicon/favicon.ico">
+
+    <link href="fav.ico" type="image/x-icon" rel="shortcut icon">
+
+    <link href="/static/css/main.min.css" type="text/css" rel="stylesheet">
+    <!-- build:css /static/css/minified.css -->
+    <link rel="stylesheet" href="/static/js/css/slicknav.min.css" />
+    <link rel="stylesheet" href="/static/js/css/superfish.min.css" />
+    <link rel="stylesheet" href="/static/js/css/vegas.min.css" />
+    <link rel="stylesheet" href="/static/js/css/jquery.mmenu.min.css" />
+    <!-- endbuild -->
+    
+    <!--  Clickcease.com tracking-->
+    <!--googleoff: all-->
+    <script type="text/javascript">
+        var script = document.createElement("script");
+        script.async = true; script.type = "text/javascript";
+        var target = 'https://clickcease.com/monitor/stat.js';
+       script.src = target;
+        var elem = document.head;
+        elem.appendChild(script);
+    </script>
+    <noscript><img src="https://monitor.clickcease.com/stats/stats.aspx" alt="Click Fraud Protection" /></noscript>
+    <!--googleon: all-->
+    <!--  Clickcease.com tracking-->
+
+    {# Useful block for loading outside scripts in other pages. #} {% block head_extra %}{% endblock %}
+</head>
+
+<body {% block body_attributes %}{% endblock %}>
+    {% block body %}
+    <!--[if lt IE 7]>
+        <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+      <![endif]-->
+
+
+    <div id="fb-root"></div>
+    <script>
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//connect.facebook.net/de_DE/sdk.js#xfbml=1&version=v2.4&appId=1551895828422076";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+    {% include "templates/partials/modules/mobile.html" %} 
+    {% include "templates/partials/modules/windows/contact-window.html" %} 
+    {% include "templates/partials/modules/ad.html" %}
+    {% include "templates/partials/modules/windows/location-window.html" %}
+
+    <div id="header" class="not-mobile">
+        <div id="" class="header-grid" style="">
+            <div id="logo" class="header-grid-row" style="">
+            </div>
+            <div id="" class="header-grid-row" style="">
+                <a class="tel-link choose-location-trigger" style="margin: 4px 0px 0px 10px;"><img alt="Telefon Icon" src="/static/img/icons/tele.png" class="tel-link-icon" /><span class="tel-link-content">Standort wählen</span></a>
+                {% include "templates/partials/modules/menu.html" %}
+            </div>
+        </div>
+    </div>
+        {% include "templates/partials/modules/slider/slider.html" %}
+            <div id="" class="content-row not-mobile" style="">
+                <div id="" class="content" style="">
+                    <div id="" class="header" style="">
+                        <p>Herzlich Willkommen bei S-thetic Hair</p>
+                        <form id="search" action="/search-results/" class="search-form" method="get" data-search-index="false">
+                            <input type="text" placeholder="Webseite durchsuchen..." id="tipue_search_input" name="q">
+                        </form>
+                    </div>
+                </div>
+            </div>

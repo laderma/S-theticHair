@@ -1,0 +1,55 @@
+<div id="menu" class="" style="">
+    <ul class="sf-menu">
+        <li class="active"><a href="/">Home</a></li>
+        <li><a href="/alle-standorte/">Standorte</a>
+            <ul>
+                <li><img alt="Menu Icon" class="arrow-icon" src="/static/img/icons/arrow.png" /><a href="/alle-standorte/">Alle Standorte</a></li>
+                {% set standorte = cms.standorte %} {% for object in standorte %}
+                <li><img alt="Menu Icon" class="arrow-icon" src="/static/img/icons/arrow.png" /><a href="{{ url(object) }}">{{ object.name }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </li>
+        <li><a href="/haartransplantation/">Haartransplantation</a>
+            <ul>
+                {% set haartransplantation = cms.haartransplantation %} {% for object in haartransplantation %}
+                <li><img alt="Menu Icon" class="arrow-icon" src="/static/img/icons/arrow.png" /><a href="{{ url(object) }}">{{ object.name }}</a>
+                </li>
+                {% endfor %}
+                <li><img alt="Menu Icon" class="arrow-icon" src="/static/img/icons/arrow.png" /><a href="/fut-methode/">FUT-Methode</a></li>
+            </ul>
+        </li>
+        <li><a href="/haarausfall/">Haarausfall</a>
+            <ul>
+                {% set haarausfall = cms.haarausfall %} {% for object in haarausfall %}
+                <li><img alt="Menu Icon" class="arrow-icon" src="/static/img/icons/arrow.png" /><a href="{{ url(object) }}">{{ object.name }}</a>
+                </li>
+                {% endfor %}
+                <li><img alt="Submenu Icon" class="submenu-icon" src="/static/img/icons/submenu.png" /><a href="/arten/typen-des-haarausfalls/">Arten</a>
+                    <ul>
+                        {% set arten = cms.arten %} {% for object in arten %}
+                        <li><img class="arrow-icon" src="/static/img/icons/arrow.png" /><a href="{{ url(object) }}">{{ object.name }}</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </li>
+                <li><img alt="Menu Icon" class="arrow-icon" src="/static/img/icons/arrow.png" /><a href="/ursachen/">Ursachen</a></li>
+                <li><img alt="Menu Icon" class="arrow-icon" src="/static/img/icons/arrow.png" /><a href="/untersuchungen/">Untersuchungen</a></li>
+            </ul>
+        </li>
+        <li><a href="/team/team/">Unser Team</a>
+            <ul>
+                <li><img alt="Submenu Icon" class="submenu-icon" src="/static/img/icons/submenu.png" /><a href="/team/team/">Fachärzte</a>
+                    <ul>
+                        {% set team = cms.team %} {% for object in team %}
+                        <li><img alt="Menu Icon" class="arrow-icon" src="/static/img/icons/arrow.png" /><a href="{{ url(object) }}">{{ object.name }}</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </li>
+            </ul>
+        </li>
+
+        <li><a href="/faq/">FAQ</a></li>
+    </ul>
+</div>

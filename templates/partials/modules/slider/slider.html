@@ -1,0 +1,52 @@
+{% if item.slider_anaus %}
+<div id="slider-row" class="not-mobile" style="">
+    <div id="slider-wrapper" class="" style="width:100%;position:relative;height:500px;">
+        <div id="user-index-slider" class="" style="width:auto;
+                                                                        height: auto;
+                                                                        float: left;
+                                                                        cursor: move;">
+            <div id="slider1_container" style="width:1000px;height: 500px;">
+                <!-- Loading Screen -->
+                <div id="slides" u="slides" style="height: 500px;">
+                    <div id="individual-slide">
+                        <div id="" class="slider-content" style="">
+                            <div id="" class="content slider-content-fix" style="">
+                                <span class="slider-heading">{{ item.slider_uberschrift }}</span>
+                                <p>{{ item.slider_text|safe }}</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% else %}
+<div id="slider-row" class="not-mobile" style="">
+    <div id="slider-wrapper" class="" style="width:100%;position:relative;height:500px;">
+        <div id="user-index-slider" class="" style="width:auto;
+                                                                        height: auto;
+                                                                        float: left;
+                                                                        cursor: move;">
+            <div id="slider1_container" style="margin:0 auto;width:1000px;height: 500px">
+                <div id="slides" u="slides" style=" height: 500px;">
+                    <div id="slide1">
+                        <div id="" class="slider-content" style="">
+                            <div id="" class="content slider-content-fix" style="">
+                                <span class="slider-heading">Willkommen bei S-thetic Hair</span>
+                                <p>Haare sind unsere Leidenschaft: S-thetic Hair bietet geballte Haarkompetenz für gesundes, volles Haar und moderne Verfahren gegen Haarausfall.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+</div>
+{% endif %}

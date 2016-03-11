@@ -1,0 +1,90 @@
+img.img-effect-1 {
+    opacity: 0.7;
+    transition: all linear 0.2s;
+}
+
+img.img-effect-1:hover {
+    opacity: 1.0;
+    transition: all linear 0.2s;
+    cursor: pointer;
+}
+
+img.sm-icon {
+    opacity: 0.6;
+    transition: all linear 0.3s;
+    cursor: pointer;
+}
+
+img.sm-icon:hover {
+    opacity: 1.0;
+    transition: all linear 0.3s;
+    cursor: pointer;
+}
+
+img.hover-shadow:hover {
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    cursor: pointer;
+    transition: all linear 0.3s;
+}
+
+.smooth-resize {
+	position:relative;
+	display:inline-block;
+	-webkit-transition:all .6s cubic-bezier(0.165,.84,.44,1);
+	transition:all .6s cubic-bezier(0.165,.84,.44,1)
+}
+.smooth-resize:after {
+	content:"";
+	border-radius:5px;
+	position:absolute;
+	z-index:-1;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	opacity:0;
+	-webkit-transition:all .6s cubic-bezier(0.165,.84,.44,1);
+	transition:all .6s cubic-bezier(0.165,.84,.44,1)
+}
+.smooth-resize:hover {
+	-webkit-transform:scale(1.15,1.15);
+	transform:scale(1.15,1.15)
+}
+.smooth-resize:hover:after {
+	opacity:1
+}
+.news-kenburns {
+	width:210px;
+	height:160px;
+	overflow:hidden
+}
+.news-kenburns img {
+	transition-duration:1s;
+	transform:scale(1);
+	transform-origin:50% 50%
+}
+.news-kenburns img:hover {
+	width:210px;
+	height:160px;
+	transform:scale(1.2);
+	transform-origin:50% 0
+}
+.kenburns {
+	width:150px;
+	height:150px;
+	overflow:hidden;
+	display:inline-block
+}
+.kenburns img {
+	transition-duration:2s;
+	transform:scale(1);
+	transform-origin:50% 50%
+}
+.kenburns img:hover {
+	width:150px;
+	height:150px;
+	transform:scale(1.2);
+	transform-origin:50% 0
+}

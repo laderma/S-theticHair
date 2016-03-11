@@ -1,0 +1,30 @@
+.ad-overlay {
+    position: fixed;
+    z-index: 200;
+    height: 100vw !important;
+    background: rgba(0, 0, 0, 0.8) !important;
+    display: none;
+    #ad {
+        width: 800px;
+        height: 350px;
+        background: #fff;
+        border: 2px solid #FFF;
+    }
+    #ad-content {
+        width: 350px;
+        float: right;
+        color: #fff;
+        position: relative;
+        right: 150px;
+        top: 35px;
+        width: 350px;
+        float: right;
+        color: #fff;
+        position: relative;
+        right: 150px;
+        top: 35px;
+    }
+    #ad-content p {
+        font-size: 20px;
+    }
+}
